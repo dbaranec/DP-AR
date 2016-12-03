@@ -17,6 +17,7 @@ public class vbScript : MonoBehaviour, IVirtualButtonEventHandler   {
 
 	private void Repeat(){
 		spider.GetComponent<Animation> ().Play();
+
 	}
 	private void ReInvoke(){
 		InvokeRepeating("Repeat", 1.0f, 1.0f);
@@ -26,8 +27,6 @@ public class vbScript : MonoBehaviour, IVirtualButtonEventHandler   {
 	public void OnButtonPressed  (VirtualButtonAbstractBehaviour vb) {
 			
 		spider.active = true;
-		//ked sa stlaci bude visible
-	//	spider.SetActive(true);
 			
 
 	}
@@ -35,7 +34,7 @@ public class vbScript : MonoBehaviour, IVirtualButtonEventHandler   {
 
 	public void OnButtonReleased(VirtualButtonAbstractBehaviour vb){
 		spider.active=false;
-		//ked pustim bude invisible
+
 
 	}
 }
